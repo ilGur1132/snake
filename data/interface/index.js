@@ -521,23 +521,27 @@ var config = {
           const LEFT = config.game.metrics.dx === -1 * config.game.metrics.size;
           /*  */
           if (KEYCODE === LEFTKEY && !RIGHT) {
-            config.game.metrics.dx = -1 * config.game.metrics.size;
             config.game.metrics.dy = 0;
+            config.game.metrics.dx = -1 * config.game.metrics.size;
+            if (e.preventDefault) e.preventDefault();
           }
           /*  */
           if (KEYCODE === UPKEY && !DOWN) {
             config.game.metrics.dx = 0;
             config.game.metrics.dy = -1 * config.game.metrics.size;
+            if (e.preventDefault) e.preventDefault();
           }
           /*  */
           if (KEYCODE === RIGHTKEY && !LEFT) {
-            config.game.metrics.dx = config.game.metrics.size;
             config.game.metrics.dy = 0;
+            config.game.metrics.dx = config.game.metrics.size;
+            if (e.preventDefault) e.preventDefault();
           }
           /*  */
           if (KEYCODE === DOWNKEY && !UP) {
             config.game.metrics.dx = 0;
             config.game.metrics.dy = config.game.metrics.size;
+            if (e.preventDefault) e.preventDefault();
           }
         }
       }
