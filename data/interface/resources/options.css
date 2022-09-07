@@ -1,0 +1,64 @@
+.container .footer .options {
+  gap: 5px;
+  border: 0;
+  height: 100%;
+  width: 250px;
+  outline: none;
+  display: none;
+  padding: 10px;
+  font-size: 12px;
+  background: #fff;
+  flex-flow: column;
+  align-items: center;
+  box-sizing: border-box;
+  font-family: monospace;
+  justify-content: center;
+}
+
+html:has(details[open]) .container .options {
+  display: flex;
+}
+
+.container .footer .options div {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 38px;
+  text-align: left;
+  max-height: 38px;
+  line-height: 38px;
+}
+
+.container .footer .options div label {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
+.container .footer .options div label span {
+  height: 100%;
+  display: inline-block;
+}
+
+.container .footer .options div input,
+.container .footer .options div select {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  color: #555;
+  width: 100px;
+  height: 38px;
+  float: right;
+  font-size: 12px;
+  line-height: 38px;
+  text-indent: 10px;
+  font-family: monospace;
+  outline: solid 1px rgba(0,0,0,0.1);
+}
+
+.container .footer .options div select,
+.container .footer .options div input[type='color'] {
+  cursor: pointer;
+}

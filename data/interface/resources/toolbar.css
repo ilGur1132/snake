@@ -1,0 +1,48 @@
+.toolbar {
+  right: 0;
+  border: 0;
+  margin: 0;
+  bottom: 0;
+  padding: 0;
+  z-index: 2;
+  display: flex;
+  flex-flow: row;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+html:has(details[open]) .toolbar {
+  bottom: 145px;
+}
+
+.toolbar div {
+	padding: 0;
+	width: 42px;
+	height: 42px;
+	cursor: pointer;
+	line-height: 42px;
+	text-align: center;
+  display: inline-block;
+  transition: 300ms ease all;
+	background-color: transparent;
+}
+
+.toolbar div:hover {
+  background-color: rgba(0,0,0,0.1);
+}
+
+.toolbar div svg {
+	fill: #fff;
+	pointer-events: none;
+	vertical-align: middle;
+}
+
+html:has(details[open]) .toolbar div svg {
+  fill: #777;
+}
+
+html[context='popup']:has(details[open]) .toolbar {
+  bottom: 150px;
+}

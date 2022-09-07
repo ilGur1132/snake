@@ -1,0 +1,23 @@
+:root {
+  --theme-color: #f17914;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: 12px;
+  overflow: hidden;
+  user-select: none;
+  font-family: monospace;
+  background-color: #fff !important;
+}
+
+html[context="webapp"] .toolbar {
+  display: none;
+}

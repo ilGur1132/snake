@@ -1,0 +1,47 @@
+@media (max-width: 700px) {
+  .container .footer .options, .container .footer .metrics {
+    width: auto !important;
+  }
+  .container .footer .options div label span,
+  .container .footer .metrics div label span {
+    display: none !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .action {
+    width: 58px !important;
+    left: unset !important;
+    right: 126px !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    background-color: transparent !important;
+  }
+  .action:hover {
+    background-color: rgba(0,0,0,0.1) !important;
+  }
+  html:has(details[open]) .action span {
+    color: #555 !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .container .footer .options, 
+  .container .footer .metrics {
+    width: 0 !important;
+    padding: 10px 0 !important;
+    visibility: hidden !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .alert {
+    left: unset !important;
+  }
+}
+
+@media (max-width: 300px) {
+  .container .footer summary {
+    font-size: 0 !important;
+  }
+}

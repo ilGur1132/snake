@@ -1,0 +1,70 @@
+.container .footer .keyboard {
+  flex: 1;
+  border: 0;
+  height: 100%;
+  padding: 10px;
+  margin: 0 auto;
+  max-width: 300px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.container .footer .keyboard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .footer .keyboard table {
+  border: 0;
+  padding: 0;
+  margin: auto;
+  border-spacing: 1px;
+  table-layout: fixed;
+  background-color: transparent;
+}
+
+.container .footer .keyboard table tr td {
+  height: 58px;
+  text-align: center;
+  background-color: #555;
+}
+
+.container .footer .keyboard table .transparent {
+  background-color: transparent;
+}
+
+.container .footer .keyboard table tr td svg {
+  fill: #FFFFFF;
+  pointer-events: none;
+  vertical-align: middle;
+}
+
+.container .footer .keyboard table tr td {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.container .footer .color {
+  width: 100%;
+  margin: auto;
+  max-width: 350px;
+  background: #ff000021;
+  border-spacing: 1px 0;
+}
+
+.container .footer .color tr td {
+  height: 38px;
+}
+
+.container .footer .color tr td {
+  cursor: pointer;
+  border-radius: 0;
+  transition: 100ms ease all;
+}
+
+.container .footer .color tr td:hover {
+  transform: scale(1.5);
+}

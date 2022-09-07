@@ -1,0 +1,40 @@
+.alert {
+  top: 25%;
+  margin: 0;
+  z-index: 3;
+  width: 100%;
+  padding: 10px;
+  display: none;
+  position: fixed;
+  max-width: 400px;
+  min-height: 110px;
+  flex-flow: column;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #555;
+  border: solid 1px #fff;
+  left: calc(50% - 175px);
+  justify-content: space-around;
+}
+
+.alert span {
+  color: #fff;
+  padding: 0 10px;
+  font-size: 12px;
+  overflow: hidden;
+  min-height: 22px;
+  line-height: 22px;
+  text-align: center;
+  display: inline-block;
+  font-family: monospace;
+  box-sizing: border-box;
+}
+
+.alert .title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+html[ended] .alert {
+  display: flex;
+}

@@ -1,0 +1,75 @@
+.container .footer .metrics {
+  gap: 5px;
+  border: 0;
+  height: 100%;
+  width: 250px;
+  outline: none;
+  display: none;
+  padding: 10px;
+  font-size: 12px;
+  background: #fff;
+  flex-flow: column;
+  align-items: center;
+  box-sizing: border-box;
+  font-family: monospace;
+  justify-content: center;
+}
+
+html:has(details[open]) .container .metrics {
+  display: flex;
+}
+
+.container .footer .metrics div {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 38px;
+  text-align: left;
+  max-height: 38px;
+  line-height: 38px;
+}
+
+.container .footer .metrics div label {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
+.container .footer .metrics div label span {
+  height: 100%;
+  display: inline-block;
+}
+
+.container .footer .metrics div input {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  color: #555;
+  width: 100px;
+  height: 38px;
+  float: right;
+  font-size: 12px;
+  line-height: 38px;
+  text-indent: 10px;
+  font-family: monospace;
+  outline: solid 1px rgba(0,0,0,0.1);
+}
+
+.container .footer .metrics div input[type='button'] {
+  color: #fff;
+  text-indent: 0;
+  cursor: pointer;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background-color: var(--theme-color);
+}
+
+.container .footer .metrics div input:disabled {
+  background: #fff;
+}
+
+

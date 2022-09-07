@@ -1,0 +1,78 @@
+.action {
+  bottom: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+  height: 42px;
+  width: 280px;
+  display: flex;
+  cursor: pointer;
+  position: fixed;
+  line-height: 42px;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #555;
+  justify-content: center;
+  left: calc(50% - 140px);
+  border-left: solid 1px #7c7c7c;
+  border-right: solid 1px #7c7c7c;
+  transition: 300ms ease background-color;
+}
+
+.action:hover {
+  background-color: var(--theme-color);
+}
+
+.action span {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 1px;
+  font-family: monospace;
+  box-sizing: border-box;
+  text-transform: uppercase;
+}
+
+.action .loader {
+  display: none;
+}
+
+.action .button {
+  display: inline-block;
+}
+
+.action .loader svg {
+  fill: #fff;
+  pointer-events: none;
+  vertical-align: middle;
+}
+
+html[loading] .action {
+  pointer-events: none;
+}
+
+html[loading] .action .loader {
+  display: inline-block;
+}
+
+html[loading] .action .button {
+  display: none;
+}
+
+html:has(details[open]) .action {
+  height: 42px;
+  bottom: 145px;
+  border-left: 0;
+  border-right: 0;
+  background-color: var(--theme-color);
+}
+
+html[context='popup']:has(details[open]) .action {
+  bottom: 150px;
+}
