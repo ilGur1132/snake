@@ -24,7 +24,9 @@ var background = {
           "method": id,
           "data": data,
           "path": "interface-to-background"
-        }); 
+        }, function () {
+          return chrome.runtime.lastError;
+        });
       }
     }
   },
@@ -42,7 +44,7 @@ var background = {
   },
   "listener": function (e) {
     if (e) {
-      for (var id in background.message) {
+      for (let id in background.message) {
         if (background.message[id]) {
           if ((typeof background.message[id]) === "function") {
             if (e.path === "background-to-interface") {
@@ -71,7 +73,7 @@ var config = {
         /*  */
         if (config.resize.timeout) window.clearTimeout(config.resize.timeout);
         config.resize.timeout = window.setTimeout(async function () {
-          var current = await chrome.windows.getCurrent();
+          const current = await chrome.windows.getCurrent();
           /*  */
           config.storage.write("interface.size", {
             "top": current.top,
@@ -84,22 +86,22 @@ var config = {
     }
   },
   "load": function () {
-    var reset = document.querySelector("#reset");
-    var reload = document.querySelector("#reload");
-    var support = document.querySelector("#support");
-    var donation = document.querySelector("#donation");
+    const reset = document.querySelector("#reset");
+    const reload = document.querySelector("#reload");
+    const support = document.querySelector("#support");
+    const donation = document.querySelector("#donation");
     /*  */
     reload.addEventListener("click", function () {
       document.location.reload();
     });
     /*  */
     support.addEventListener("click", function () {
-      var url = config.addon.homepage();
+      const url = config.addon.homepage();
       chrome.tabs.create({"url": url, "active": true});
     }, false);
     /*  */
     donation.addEventListener("click", function () {
-      var url = config.addon.homepage() + "?reason=support";
+      const url = config.addon.homepage() + "?reason=support";
       chrome.tabs.create({"url": url, "active": true});
     }, false);
     /*  */
@@ -119,7 +121,7 @@ var config = {
     "name": '',
     "connect": function () {
       config.port.name = "webapp";
-      var context = document.documentElement.getAttribute("context");
+      const context = document.documentElement.getAttribute("context");
       /*  */
       if (chrome.runtime) {
         if (chrome.runtime.connect) {
@@ -163,7 +165,7 @@ var config = {
     "write": function (id, data) {
       if (id) {
         if (data !== '' && data !== null && data !== undefined) {
-          var tmp = {};
+          let tmp = {};
           tmp[id] = data;
           config.storage.local[id] = data;
           chrome.storage.local.set(tmp, function () {});

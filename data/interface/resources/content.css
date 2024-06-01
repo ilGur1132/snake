@@ -21,6 +21,6 @@
   outline: none;
   max-height: 100%;
   position: absolute;
-  border: solid 1px whitesmoke;
+  border: solid 1px #777;
   transform: translate(-50%, -50%);
 }

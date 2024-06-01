@@ -2,11 +2,11 @@
   gap: 5px;
   border: 0;
   height: 100%;
-  width: 250px;
+  width: 272px;
   outline: none;
   display: none;
   padding: 10px;
-  font-size: 12px;
+  font-size: 13px;
   background: #fff;
   flex-flow: column;
   align-items: center;
@@ -34,7 +34,9 @@ html:has(details[open]) .container .metrics {
   padding: 0;
   width: 100%;
   height: 100%;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .container .footer .metrics div label span {
@@ -46,11 +48,13 @@ html:has(details[open]) .container .metrics {
   border: 0;
   margin: 0;
   padding: 0;
-  color: #555;
+  color: #333;
   width: 100px;
   height: 38px;
-  float: right;
-  font-size: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  min-width: 100px;
+  max-width: 100px;
   line-height: 38px;
   text-indent: 10px;
   font-family: monospace;

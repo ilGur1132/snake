@@ -1,9 +1,8 @@
 {
-  "version": "0.1.0",
+  "version": "0.1.1",
   "name": "Snake Game",
   "manifest_version": 3,
   "offline_enabled": true,
-  "permissions": ["storage", "contextMenus"],
   "homepage_url": "https://mybrowseraddon.com/snake-game.html",
   "description": "An easy-to-use and lite Snake game for your browser.",
   "commands": {
@@ -12,6 +11,10 @@
   "background": {
     "service_worker": "background.js"
   },
+  "permissions": [
+    "storage", 
+    "contextMenus"
+  ],
   "action": {
     "default_title": "Snake Game",
     "default_icon": {

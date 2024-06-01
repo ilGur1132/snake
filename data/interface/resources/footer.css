@@ -22,9 +22,9 @@
   color: #fff;
   height: 42px;
   outline: none;
-  font-size: 12px;
+  font-size: 13px;
   text-align: left;
-  line-height: 42px;
+  line-height: 44px;
   text-indent: 15px;
   font-family: monospace;
   background-color: #555;
@@ -39,7 +39,7 @@
 }
 
 .container .footer details[open] summary {
-  color: #555;
+  color: #333;
   background-color: #fff !important;
 }
 

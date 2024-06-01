@@ -13,14 +13,14 @@
   box-sizing: border-box;
   background-color: #555;
   border: solid 1px #fff;
-  left: calc(50% - 175px);
+  left: calc(50% - 200px);
   justify-content: space-around;
 }
 
 .alert span {
   color: #fff;
   padding: 0 10px;
-  font-size: 12px;
+  font-size: 13px;
   overflow: hidden;
   min-height: 22px;
   line-height: 22px;
@@ -31,7 +31,7 @@
 }
 
 .alert .title {
-  font-size: 14px;
+  font-size: 17px;
   font-weight: 600;
 }
 

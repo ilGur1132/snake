@@ -30,7 +30,7 @@
   padding: 0;
   width: 100%;
   color: #fff;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   text-align: center;
   letter-spacing: 1px;
@@ -44,6 +44,8 @@
 }
 
 .action .button {
+  font-size: 17px;
+  letter-spacing: 3px;
   display: inline-block;
 }
 
