@@ -28,14 +28,16 @@
   height: 58px;
   text-align: center;
   background-color: #555;
+  outline: solid 1px #e7e7e7;
 }
 
 .container .footer .keyboard table .transparent {
+  outline: none;
   background-color: transparent;
 }
 
 .container .footer .keyboard table tr td svg {
-  fill: #FFFFFF;
+  fill: #fff;
   pointer-events: none;
   vertical-align: middle;
 }

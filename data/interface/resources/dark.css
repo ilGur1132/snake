@@ -1,0 +1,70 @@
+html[theme='dark'], 
+html[theme='dark'] body {
+  color: #ebebeb;
+  color-scheme: dark;
+  background-color: #1e1e1e;
+}
+
+html[theme='dark'] .container .footer details[open] summary {
+  color: #ebebeb !important;
+  background-color: #1e1e1e !important;
+}
+
+html[theme='dark'] .container .footer,
+html[theme='dark'] .container .content,
+html[theme='dark'] .container .footer .metrics,
+html[theme='dark'] .container .footer .options,
+html[theme='dark'] .container .footer .keyboard,
+html[theme='dark'] .container .footer .sections,
+html[theme='dark'] .container .footer .metrics div input,
+html[theme='dark'] .container .footer .options div input,
+html[theme='dark'] .container .footer .options div select {
+  color: #ebebeb;
+  background-color: #1e1e1e;
+}
+
+html[theme='dark'] .toolbar div:hover {
+  background-color: rgb(255 255 255 / 10%);
+}
+
+html[theme='dark'] .action:hover {
+  background-color: var(--theme-color);
+}
+
+html[theme='dark'] .alert,
+html[theme='dark'] .action,
+html[theme='dark'] .container .footer summary {
+  background-color: #000000;
+}
+
+html[theme='dark'] .container .footer .keyboard table tr td {
+  background-color: #000000;
+  outline-color: rgb(255 255 255 / 25%);
+}
+
+html[theme='dark'] .container .footer .keyboard table .transparent {
+  background-color: transparent;
+}
+
+html[theme='dark'] .container .footer .metrics div input[type='button'] {
+  background-color: var(--theme-color);
+}
+
+html[theme='dark']:has(details[open]) .container .footer summary {
+  border-color: rgb(255 255 255 / 25%);
+}
+
+html[theme='dark'] .container .content canvas,
+html[theme='dark']:has(details[open]) .container .footer {
+  border-color: rgb(255 255 255 / 50%);
+}
+
+html[theme='dark'] .container .footer .metrics div input,
+html[theme='dark'] .container .footer .options div input,
+html[theme='dark'] .container .footer .options div select {
+  outline-color: rgb(255 255 255 / 25%);
+}
+
+html[theme='dark']:has(details[open]) .toolbar div svg {
+  fill: #ebebeb;
+}

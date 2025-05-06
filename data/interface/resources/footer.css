@@ -22,12 +22,13 @@
   color: #fff;
   height: 42px;
   outline: none;
-  font-size: 13px;
+  font-size: 14px;
   text-align: left;
   line-height: 44px;
   text-indent: 15px;
   font-family: monospace;
   background-color: #555;
+  border-top: solid 1px #555;
 }
 
 .container .footer summary::marker {
@@ -40,6 +41,7 @@
 
 .container .footer details[open] summary {
   color: #333;
+  border-top: 0;
   background-color: #fff !important;
 }
 

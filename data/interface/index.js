@@ -86,6 +86,7 @@ var config = {
     }
   },
   "load": function () {
+    const theme = document.querySelector("#theme");
     const reset = document.querySelector("#reset");
     const reload = document.querySelector("#reload");
     const support = document.querySelector("#support");
@@ -103,6 +104,15 @@ var config = {
     donation.addEventListener("click", function () {
       const url = config.addon.homepage() + "?reason=support";
       chrome.tabs.create({"url": url, "active": true});
+    }, false);
+    /*  */
+    theme.addEventListener("click", function () {
+      let attribute = document.documentElement.getAttribute("theme");
+      attribute = attribute === "dark" ? "light" : "dark";
+      /*  */
+      document.documentElement.setAttribute("theme", attribute);
+      config.storage.write("theme", attribute);
+      config.game.methods.render(false, false, false);
     }, false);
     /*  */
     reset.addEventListener("click", function () {
@@ -285,6 +295,8 @@ var config = {
         config.game.metrics.details.element.removeAttribute("open");
       }
       /*  */
+      const theme = config.storage.read("theme") !== undefined ? config.storage.read("theme") : "light";
+      document.documentElement.setAttribute("theme", theme !== undefined ? theme : "light");
       document.addEventListener("keydown", config.game.methods.change.direction);
       /*  */
       config.game.methods.start(true);
@@ -377,8 +389,10 @@ var config = {
           config.game.metrics.snake.forEach(config.game.methods.draw.part);
         },
         "food": function (color) {
-          config.game.metrics.context.fillStyle = color ? color : "#555555";
-          config.game.metrics.context.strokeStyle = color ? color : "#555555";
+          const theme = config.storage.read("theme") !== undefined ? config.storage.read("theme") : "light";
+          /*  */
+          config.game.metrics.context.fillStyle = color ? color : (theme === "light" ? "#555555" : "#cdcdcd");
+          config.game.metrics.context.strokeStyle = color ? color : (theme === "light" ? "#555555" : "#454545");
           config.game.metrics.context.fillRect(config.game.metrics.food.x, config.game.metrics.food.y, config.game.metrics.size, config.game.metrics.size);
           config.game.metrics.context.strokeRect(config.game.metrics.food.x, config.game.metrics.food.y, config.game.metrics.size, config.game.metrics.size);
         },
@@ -389,7 +403,9 @@ var config = {
           config.game.metrics.context.strokeRect(e.x, e.y, config.game.metrics.size, config.game.metrics.size);
         },
         "board": function (color) {
-          config.game.metrics.context.fillStyle = "#ffffff";
+          const theme = config.storage.read("theme") !== undefined ? config.storage.read("theme") : "light";
+          /*  */
+          config.game.metrics.context.fillStyle = theme === "light" ? "#ffffff" : "#000000";
           config.game.metrics.context.fillRect(0, 0, config.game.metrics.canvas.width, config.game.metrics.canvas.height);
           /*  */
           for (let x = 0; x <= config.game.metrics.canvas.width; x += config.game.metrics.size) {
@@ -402,7 +418,7 @@ var config = {
             config.game.metrics.context.lineTo(config.game.metrics.canvas.width + 0, y);
           }
           /*  */
-          config.game.metrics.context.strokeStyle = color ? color : "whitesmoke";
+          config.game.metrics.context.strokeStyle = color ? color : (theme === "light" ? "whitesmoke" : "#454545");
           config.game.metrics.context.stroke();
         }
       },
